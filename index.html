@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Fruits And Vegetables Website</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- כאן תוסיף את הקישור ל-Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCJxncKx-xRYk-ekK-vQFEwIns1BeV4w0M",
+          authDomain: "groupandbuy-fe227.firebaseapp.com",
+          projectId: "groupandbuy-fe227",
+          storageBucket: "groupandbuy-fe227.appspot.com",
+          messagingSenderId: "154215827416",
+          appId: "1:154215827416:web:b831290b19f8889c9454ad",
+          measurementId: "G-H3632BEYZ8"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+
+
+    <!-- Navbar -->
+    <header>
+        
+        <div class="login-buttons">
+            <button id="show-login">התחברות לאתר</button>
+            <button id="show-register">הרשמה לאתר</button>
+
+        </div>
+
+        <!-- Profile -->
+        <div class="profile">
+            <img src="img/profile.jpg" alt="">
+            <span>ליאור דנינו</span>
+            <i class='bx bx-caret-down'></i>
+        </div>
+
+        <!-- Menu Icon -->
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- Nav List -->
+        <ul class="navbar">
+            <li><a href="index.html" class="home-active">דף הבית</a></li>
+            <li><a href="openGroups.html">קבוצות פתוחות</a></li>
+            <li><a href="farmers.html">הכירו את החקלאים</a></li>
+            <li><a href="about.html">קצת עלינו</a></li>
+        </ul>
+
+        <a href="#" class="logo"><i class='bx bxs-basket'></i>Group & Buy</a>
+
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h2>Log in</h2>
+                <div class="form-element">
+                    <label for="login-email">דואר אלקטרוני</label> <!-- עדכון id -->
+                    <input type="text" id="login-email" placeholder="הזן דואר אלקטרוני">
+                </div>
+                <div class="form-element">
+                    <label for="login-password">סיסמה</label> <!-- עדכון id -->
+                    <input type="password" id="login-password" placeholder="הזן סיסמה">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">זכור אותי</label>
+                </div>
+                <div class="form-element">
+                    <button>התחברות</button>
+                </div>
+                <a href="#">שכחת סיסמה?</a>
+            </div>
+        </div>
+        
+        <div class="popup" id="register-popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h2>הרשמה</h2>
+                <form id="register-form">
+                    <div class="form-element">
+                        <label for="username">שם משתמש</label>
+                        <input type="text" id="username" placeholder="הזן שם משתמש" required>
+                    </div>
+                    <div class="form-element">
+                        <label for="register-email">דואר אלקטרוני</label> <!-- עדכון id -->
+                        <input type="email" id="register-email" placeholder="הזן דואר אלקטרוני" required>
+                    </div>
+        
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Enter password" required>
+                            <i class='bx bx-hide toggle-password'></i> <!-- Icon to toggle visibility -->
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-container">
+                            <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                            <i class='bx bx-hide toggle-password'></i> <!-- Icon to toggle visibility -->
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <button type="submit" id="register-btn">הרשמה</button> <!-- הכפתור שהוספנו -->
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+        
+        
+    </header>
+
+    <!-- Home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span></span>
+                    <h1><br> פירות תוצרת כחול לבן <br>מארז פירות חגיגי</h1>
+                    <a href="#" class="btn">קנה עכשיו<i class='bx bx-left-arrow-alt'></i></a>
+                </div>
+                <img src="img/fruitBox1.png" alt="">
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span></span>
+                    <h1><br> ירקות מובחרים <br>מארז מנצח למזווה</h1>
+                    <a href="#" class="btn">קנה עכשיו<i class='bx bx-left-arrow-alt'></i></a>
+                </div>
+                <img src="img/vegetablesBox1.png" alt="">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span></span>
+                    <h1><br> מוצרים מיוחדים <br>מארז פירות אקזוטיים</h1>
+                    <a href="#" class="btn">קנה עכשיו<i class='bx bx-left-arrow-alt'></i></a>
+                </div>
+                <img src="img/fruitBox2.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section>
+
+    
+    <!-- About -->
+    <section class="about" id="about">
+        <img src="img/about.png" alt="">
+        <div class="about-text">
+            <span>קצת עלינו</span>
+            <p>הרעיון שלנו נוצר מהרצון לחבר בין החקלאים הנהדרים שיש לנו לבין הלקוחות, ליצור שוק חדש שבו הצרכן מקבל תוצרת איכותית וזולה יותר.</p>
+            <p>אצלנו תוכלו למצוא מגוון רחב של מוצרים טריים היישר מן השדה בקלות ובמהירות</p>
+            <a href="#" class="btn">קרא עוד...<i class='bx bx-left-arrow-alt'></i></a>
+        </div>
+    </section>
+
+    <!-- Customers -->
+    <section class="customers" id="customers">
+        <h2>למה הלקוחות אוהבים אותנו?</h2>
+        <!-- Customer Content -->
+        <div class="customers-container">
+            <!-- Review 1 -->
+            <div class="box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>מעולם לא נהניתי מאיכות כזו של פירות וירקות, השפע והמחירים הטובים בהחלט מצאו אצלי ערך מוסף</p>
+                <div class="review-profile">
+                    <img src="img/c1.jpg" alt="">
+                    <h3>מאיה גולן</h3>
+                </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>הזמנתי מארז של פירות מיוחדים שלא מצאתי באף סופרמרקט או בשווקים, והכל בכמה קליקים</p>
+                <div class="review-profile">
+                    <img src="img/c2.jpg" alt="">
+                    <h3>רון אוחנה</h3>
+                </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <p>מאז שרכשתי כאן בפעם הראשונה, אני כבר לא קונה פירות וירקות בשום מקום, האיכות גבוהה יותר מכל מקום אחר שבו קניתי</p>
+                <div class="review-profile">
+                    <img src="img/c3.jpg" alt="">
+                    <h3>יואב ציפורי</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class='bx bxs-basket'></i>Group & Buy</a>
+            <p>היוצרים 25, רעננה<br>מיקוד 186950</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h2>קטגוריות</h2>
+            <a href="#">פירות</a>
+            <a href="#">ירקות</a>
+            <a href="#">פירות אקזוטיים</a>
+            <a href="#">מוצרים חגיגיים</a>
+        </div>
+        <div class="footer-box">
+            <h2>לינקים שימושיים</h2>
+            <a href="#">תנאי התשלום</a>
+            <a href="#">הסכמה על התנאים</a>
+            <a href="#">הבלוג שלנו</a>
+            <a href="#">מדיניות החזרה</a>
+        </div>
+        <div class="footer-box">
+            <h2>ניוזלטר</h2>
+            <p>קבל 10% הנחה<br></p>
+            <form action="">
+                <i class='bx bxs-envelope'></i>
+                <input type="email" name="" id="" placeholder="הקלד את כתובת דואר האלקטרוני שלך">
+                <i class='bx bx-arrow-back bx-rotate-180'></i>
+            </form>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169;</p>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+</body>
+</html>
