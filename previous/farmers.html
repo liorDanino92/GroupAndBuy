@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link To CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Box Icons -->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    </head>
+<body>
+
+    
+      
+    <!-- Navbar -->
+    <header>
+
+        <div class="login-buttons">
+            <button id="show-login">התחברות לאתר</button>
+            <button id="show-login">הרשמה לאתר</button>
+        </div>
+
+        <!-- Profile -->
+        <div class="profile">
+            <img src="img/profile.jpg" alt="">
+            <span>ליאור דנינו</span>
+            <i class='bx bx-caret-down' ></i>
+        </div>
+        
+        <!-- Menu Icon  -->
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- Nav List -->
+        <ul class="navbar">
+            
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="openGroups.html">קבוצות פתוחות</a></li>
+            <li><a href="farmers.html" class="farmers-active">הכירו את החקלאים</a></li>
+            <li><a href="about.html">קצת עלינו</a></li>
+            
+        </ul>
+        
+
+
+        <a href="#" class="logo"><i class='bx bxs-basket'></i>Group & Buy</a>
+
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h2>Log in</h2>
+                <div class="form-element">
+                    <label for="email">דואר אלקטרוני</label>
+                    <input type="text" id="email" placeholder="הזן דואר אלקטרוני">
+                </div>
+                <div class="form-element">
+                    <label for="password">סיסמה</label>
+                    <input type="password" id="password" placeholder="הזן סיסמה">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">זכור אותי</label>
+                </div>
+                <div class="form-element">
+                    <button>התחברות</button>
+                </div>
+                <a href="#">שכחת סיסמה?</a>
+            </div>
+        </div>
+        
+
+    </header>
+     
+
+      <div class="container1">
+
+        <h1 class="heading1"></h1>
+    
+            <div class="box1-container1">
+        
+                <div class="box1">
+                    
+                    <h2>משק זנזורי</h2>
+                    <p>איזור הפצה: מרכז, דרום</p>
+                    <h4>אנו משפחת זנזורי, ממושב שדה עוזיהו, מחזיקים משק חקלאי שעובר בדורות כבר 50 שנה.
+                        כיום, אנו מתמחים בגידול כל סוגי החסות, עגבניות חממה בגידול הידרופוני, ברוקולי, בצל, כרוב לבן ואדום, סלרי וסלק עלים.</h4>
+                      
+                    <div style="text-align: center">
+                        <img src="img\Zanzori.png" alt="משק זנזורי" style="width: 100px; height: auto;">
+                    </div>
+
+                    <!-- כפתור לפתיחת מודאל המוצרים -->
+                    <button class="open-modal" data-farmer="משק זנזורי" data-products="ברוקולי, ברוקומיני, חסה ערבית, חסה לאליק, לבבות חסה, בצל ריברסייד, כרוב לבן, כרוב אדום, 
+                    סלק עלים, סלרי עלים, ראש סלרי, שורש פטרוזיליה, עגבניות חממה, באקצ'וי">צפה במוצרים</button>
+
+                </div>
+        
+                <div class="box1">
+                    <h2>משק מלר</h2>
+                    <p>איזה הפצה: כל הארץ</p>
+                    <h4>משק הנמצא במושב נעמ"ה, מתמחה בגידול תבלינים טריים, מגדלי הבזיליקום הגדולים בעולם. אני מגדלים גם פירות וירקות מסוגים שונים. משק חקלאי בעל מוניטין של עשרות שנים.</h4>
+                    
+                    <div style="text-align: center">
+                        <img src="img/meller-logo.png" alt="משק מלר" style="width: 100px; height: auto; margin-top: 15px;">
+                    </div>
+                    
+                    <button class="open-modal" data-farmer="משק מלר" data-products="אבטיח, אבטיח גולי, אבטיח צהוב, אבטיח אישי, מלון כתום, מלון גליה, מלון בוכרי צהוב, מלון בוכרי ירוק, סברס ">צפה במוצרים</button>
+                </div>
+        
+                <div class="box1">
+                    
+                    <h2>משק יעקובובסקי</h2>
+                    <p>איזור הפצה: צפון</p>
+                    <h4>משק המתמחה בגידול ירקות בשטחים פתוחים כמו תפוחי אדמה, בטטה, גזר. מגדלים גם אבטיח ומלון. אנו מרחיבים את המגוון שלנו כל הזמן ומביאים עוד ועוד סוגים מיוחדים של תוצרת חקלאית. </h4>
+                    
+                    <div style="text-align: center">
+                        <img src="img/logo(2).png" alt="משק יעקובובסקי" style="width: 100px; height: auto; margin-top: 23px;">
+                    </div>
+                    
+                    <button class="open-modal" data-farmer="משק יעקובובסקי" data-products="פטל אדום, פטל שחור, אוכמניות, תות פקיסטני, פטל צהוב, תות שדה, דומדמניות">צפה במוצרים</button>
+                </div>
+        
+                <div class="box1">
+                    
+                    <h2>משק קירשנר</h2>
+                    <p>איזור הפצה: מרכז</p>
+                    <h4>משק צעיר המגדל פירות נשירים, מתמחה בייצור דבש טהור, קטניות ועשבי טיבול. אנו מאמינים באיכות וטריות, אלה שני כללים המנחים אותנו לאורך כל הדרך.</h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/newlogo.c452bf06.png" alt="משק קירשנר" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק קירשנר" data-products="">צפה במוצרים</button>
+                </div>
+    
+            <div class="box1">
+                
+                <h2>משק טל דיירקט</h2>
+                    <p>איזור הפצה: דרום</p>
+                    <h4>משק טל דיירקט </h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/לוגו-משק-טל.png" alt="משק טל דיירקט" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק טל דיירקט" data-products="">צפה במוצרים</button>
+            </div>
+
+            <div class="box1">
+                
+                <h2>משק טל דיירקט</h2>
+                    <p>איזור הפצה: דרום</p>
+                    <h4>משק טל דיירקט </h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/לוגו-משק-טל.png" alt="משק טל דיירקט" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק טל דיירקט" data-products="">צפה במוצרים</button>
+            </div>
+
+            <div class="box1">
+                
+                <h2>משק טל דיירקט</h2>
+                    <p>איזור הפצה: דרום</p>
+                    <h4>משק טל דיירקט </h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/לוגו-משק-טל.png" alt="משק טל דיירקט" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק טל דיירקט" data-products="">צפה במוצרים</button>
+            </div>
+
+            <div class="box1">
+                
+                <h2>משק טל דיירקט</h2>
+                    <p>איזור הפצה: דרום</p>
+                    <h4>משק טל דיירקט </h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/לוגו-משק-טל.png" alt="משק טל דיירקט" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק טל דיירקט" data-products="">צפה במוצרים</button>
+            </div>
+
+            <div class="box1">
+                
+                <h2>משק טל דיירקט</h2>
+                    <p>איזור הפצה: דרום</p>
+                    <h4>משק טל דיירקט </h4>
+                   
+                    <div style="text-align: center">
+                        <img src="img/לוגו-משק-טל.png" alt="משק טל דיירקט" style="width: 130px; height: auto; margin-top: 50px;">
+                    </div>
+                   
+                    <button class="open-modal" data-farmer="משק טל דיירקט" data-products="">צפה במוצרים</button>
+            </div>
+
+    
+    
+        </div>
+    
+    </div>
+
+        <!-- מודאל להצגת מוצרים -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="farmerName"></h2>
+            <ul id="productList"></ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+</html>
